@@ -31,10 +31,21 @@ mlruns/
 mlruns.db
 mlartifacts/
 
-# Results and Models (optional - uncomment if you want to track them)
-# results/*.csv
-# results/*.pkl
-# models/*.joblib
+# Results and Models - Large files excluded
+results/*.pkl
+models/*.pkl
+models/*.joblib
+staticfiles/models/*.joblib
+staticfiles/*.pkl
+
+# Large video files
+static/Video/
+*.mp4
+*.avi
+*.mov
+
+# Large CSV files (over 50MB)
+results/train_data.csv
 
 # IDE
 .vscode/
