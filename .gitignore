@@ -1,0 +1,48 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+*.pot
+local_settings.py
+
+# Environment variables
+.env
+.env.local
+
+# MLflow
+mlruns/
+mlruns.db
+mlartifacts/
+
+# Results and Models (optional - uncomment if you want to track them)
+# results/*.csv
+# results/*.pkl
+# models/*.joblib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

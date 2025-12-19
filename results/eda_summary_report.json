@@ -1,0 +1,45 @@
+{
+    "analysis_timestamp": "2025-11-28T11:27:37.340554",
+    "dataset_summary": {
+        "total_records": 39800,
+        "total_features": 41,
+        "unique_species": 40,
+        "datasets_combined": 4
+    },
+    "data_quality": {
+        "missing_values_total": 0,
+        "missing_percentage_avg": 0.0
+    },
+    "migration_insights": {
+        "avg_migration_distance": 6742.001478850269,
+        "avg_migration_speed": 59.333412426307014,
+        "most_common_species": "Common Redshank"
+    },
+    "patterns": {
+        "seasonal_distribution": {
+            "Summer": 10468,
+            "Autumn": 10099,
+            "Winter": 9838,
+            "Spring": 9395
+        },
+        "flyway_distribution": {
+            "East Asian\u2013Australasian Flyway": 7261,
+            "Central Asian Flyway": 7064,
+            "Pacific Flyway": 6997,
+            "Mediterranean Flyway": 6398,
+            "African\u2013Eurasian Flyway": 6097,
+            "Atlantic Flyway": 2324,
+            "Mississippi Flyway": 1757,
+            "East Atlantic Flyway": 1319,
+            "Various": 389,
+            "Central Flyway": 194
+        },
+        "conservation_status_distribution": {
+            "Least Concern": 16568,
+            "Near Threatened": 7941,
+            "Endangered": 7623,
+            "Vulnerable": 7603,
+            "Critically Endangered": 65
+        }
+    }
+}
