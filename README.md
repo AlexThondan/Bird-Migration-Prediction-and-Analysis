@@ -1,132 +1,125 @@
-# COVID-19 Dashboard Web Application
+# Bird Migration Prediction using Big Data Analytics & Machine Learning
 
-A full-stack COVID-19 dashboard built using **Node.js**, **Express.js**, **MongoDB**, and **vanilla HTML/CSS/JavaScript**.  
-The application provides user authentication, secure REST APIs, and interactive dashboards for analyzing COVID-19 data, comparison views, heatmaps, and predictive analytics.
+## Project Overview
+This postgraduate project (MSc Data Science – Kristu Jayanti Autonomous College, 2025–26) focuses on predicting bird migration patterns using big data analytics and supervised machine learning models.
 
----
-
-## 📌 Features
-
-### User Features
-- User Signup & Login  
-- JWT-based authentication  
-- Interactive COVID-19 dashboard  
-- Region-wise comparison  
-- Heatmap visualization  
-- Predictive analytics page  
-
-### Backend Capabilities
-- Modular MVC architecture  
-- REST API with Express.js  
-- MongoDB database integration  
-- Secure password hashing  
-- Protected routes using middleware  
+The system processes a large dataset (~20,000 records) containing bird species, migration routes, reasons, and wingspan details. Through preprocessing, feature engineering, and model training, the model achieved **96% accuracy** with strong precision–recall performance.  
+MLflow is used for experiment tracking, and a simple HTML/CSS dashboard visualizes the migration patterns and predictions.
 
 ---
 
-## 🛠️ Tech Stack
-
-**Frontend:**  
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla)
-
-**Backend:**  
-- Node.js  
-- Express.js  
-- MongoDB + Mongoose  
-- JWT  
-- bcryptjs  
-- dotenv  
-- CORS
+## Dataset
+- **Source:** Kaggle Bird Migration Dataset  
+- **Format:** CSV  
+- **Records:** ~20,000  
+- **Key Features:**
+  - species  
+  - origin_location  
+  - destination_location  
+  - migration_reason  
+  - wingspan (cm)
 
 ---
 
-## 📁 Project Structure
+## Installation
 
-```
-CovidDashboard/
-│
-├── middleware/
-│   └── authMiddleware.js
-│
-├── models/
-│   └── User.js
-│
-├── routes/
-│   └── user.js
-│
-├── public/
-│   ├── signup.html
-│   ├── login.html
-│   ├── dashboard.html
-│   ├── comparison.html
-│   ├── heatmap.html
-│   ├── advanced_prediction.html
-│   ├── style.css
-│   ├── script.js
-│   ├── dashboard.js
-│   └── auth.js
-│
-├── server.js
-├── package.json
-└── .env
-```
-
----
-
-## ⚙️ Installation & Setup
-
-### 1. Clone the repository  
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/covid-dashboard.git
-cd covid-dashboard
+git clone https://github.com/your-username/bird-migration-prediction.git
+cd bird-migration-prediction
 ```
 
-### 2. Install dependencies  
+### 2. Create Virtual Environment
 ```bash
-npm install
+python -m venv venv
 ```
 
-### 3. Configure environment variables  
-Create a `.env` file in the root directory:
+Activate:
 
-```
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
-
-### 4. Start the application  
+**Windows**
 ```bash
-npm start
+venv\Scripts\activate
 ```
 
-Application runs at:  
+**Mac/Linux**
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+Sample `requirements.txt`:
+```
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+mlflow
+```
+
+---
+
+## Project Structure
+```text
+bird-migration-prediction/
+├── data/
+│   └── bird_migration.csv
+├── notebooks/
+│   └── EDA_and_Modeling.ipynb
+├── src/
+│   ├── preprocessing.py
+│   ├── train.py
+│   └── predict.py
+├── mlflow_runs/
+├── visualization/
+│   ├── index.html
+│   └── style.css
+├── requirements.txt
+├── mlflow_tracking.py
+└── README.md
+```
+
+---
+
+## Usage
+
+### Run Training Pipeline
+```bash
+python src/train.py
+```
+
+### Launch MLflow UI
+```bash
+mlflow ui
+```
+Open in browser:  
 **http://localhost:5000**
 
----
-
-## 🌐 Application Flow
-
-- `/signup` → User registration  
-- `/login` → User authentication  
-- `/dashboard` → COVID-19 analytics  
-- `/comparison` → Region comparison  
-- `/heatmap` → Spread visualization  
-- `/advanced_prediction` → Prediction dashboard  
+### Open Frontend Visualization
+Open:
+```
+visualization/index.html
+```
 
 ---
 
-## 🔒 Authentication Flow
+## Results
 
-- Passwords hashed with bcrypt  
-- JWT token generated on login  
-- Auth middleware protects secured routes  
+- **Accuracy:** 96%  
+- **F1-Score:** High across all classes  
+- **Important factors:** Migration reason & wingspan  
+- **Outputs Generated:**
+  - Confusion Matrix  
+  - Feature Importance  
+  - Migration Path Charts  
 
 ---
 
-## 📸 Screenshots (Aligned Gallery)
+## Screenshots (Aligned)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8a2935aa-02c4-4392-a108-71f32c9dfa07" width="32%" />
@@ -159,19 +152,25 @@ Application runs at:
 
 ---
 
-## 🚀 Future Enhancements
-- Real-time data integration  
-- Fully responsive interface  
-- D3.js/Chart.js advanced visualizations  
-- Role-based admin dashboard  
-- Deployment on Render/AWS/Vercel  
+## Future Scope
+
+- Integrate real-time GPS bird tracking data  
+- Use climate and environmental models for dynamic predictions  
+- Extend dataset to global migration patterns  
+- Deploy using Flask/Dash  
+- Mobile app for birdwatchers & researchers  
 
 ---
 
-## 👨‍💻 Author  
+## Author
 **Alex T Sabu**  
-MSc Data Science  
-Bengaluru, India  
+MSc Data Science, Kristu Jayanti Autonomous College  
+Academic Year: *2025–26*
+
+Feel free to reach out for collaboration or academic discussions.
 
 ---
+
+## License
+This project is licensed under the **MIT License**.
 
