@@ -1,5 +1,6 @@
 # Bird Migration Prediction using Big Data Analytics & Machine Learning
 
+
 ## Project Overview
 This postgraduate project (MSc Data Science – Kristu Jayanti Autonomous College, 2025–26) focuses on predicting bird migration patterns using big data analytics and supervised machine learning models.
 
